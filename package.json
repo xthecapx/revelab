@@ -1,6 +1,6 @@
 {
   "name": "revelab",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Slide components for Reveal.js presentations — works standalone or as a Tailwind CSS plugin",
   "main": "index.js",
   "style": "dist/revelab.css",
