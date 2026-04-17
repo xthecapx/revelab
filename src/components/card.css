@@ -1,0 +1,75 @@
+.reveal .card {
+    border-color: var(--rui-color-border);
+    border-radius: var(--rui-radius-sm);
+}
+
+.reveal .card-header {
+    background-color: var(--rui-color-bg-surface);
+    border-bottom-color: var(--rui-color-border);
+    font-size: 0.85em;
+    padding: 0.4em 0.8em;
+}
+
+.reveal .card-body {
+    font-size: 0.75em;
+    padding: 0.6em 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.reveal .card-body:has(table) {
+    padding: 0 !important;
+}
+
+.reveal .card-body table {
+    width: 100% !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+.reveal .card-body table th:first-child,
+.reveal .card-body table td:first-child {
+    border-left: none !important;
+}
+
+.reveal .card-body table th:last-child,
+.reveal .card-body table td:last-child {
+    border-right: none !important;
+}
+
+.reveal .card-body table thead tr:first-child th {
+    border-top: none !important;
+}
+
+.reveal .card-body table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.reveal table {
+    border-collapse: collapse !important;
+    border: 1px solid var(--rui-color-border) !important;
+    margin: 0 auto;
+}
+
+.reveal table th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+.reveal table th,
+.reveal table td {
+    border: 1px solid var(--rui-color-border) !important;
+    padding: 0.3em 0.6em;
+    text-align: left;
+}
+
+.reveal blockquote {
+    border-left: 4px solid var(--rui-color-faint);
+    padding: 0.3em 1em;
+    background: #fafafa;
+    font-style: italic;
+    width: 80%;
+}

@@ -1,0 +1,26 @@
+.qr-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0.6em auto;
+}
+
+.qr-block img {
+    width: 220px;
+    height: 220px;
+    image-rendering: pixelated;
+    display: block;
+}
+
+.qr-block .btn {
+    transform: none !important;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+.qr-block .btn:hover,
+.qr-block .btn:focus {
+    border: 2px solid transparent;
+    outline: none;
+}

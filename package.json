@@ -1,0 +1,50 @@
+{
+  "name": "revelab",
+  "version": "0.0.1",
+  "description": "Slide components for Reveal.js presentations — works standalone or as a Tailwind CSS plugin",
+  "main": "index.js",
+  "style": "dist/revelab.css",
+  "packageManager": "pnpm@10.8.1",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": [
+    "reveal.js",
+    "revealjs",
+    "tailwindcss",
+    "tailwind",
+    "plugin",
+    "slides",
+    "presentation",
+    "css",
+    "components"
+  ],
+  "author": "Cristian Marquez <xthecapx>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xthecapx/revelab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xthecapx/revelab/issues"
+  },
+  "homepage": "https://github.com/xthecapx/revelab#readme",
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "lightningcss": "^1.32.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "files": [
+    "index.js",
+    "src/**/*.css",
+    "dist/revelab.css",
+    "dist/revelab.min.css"
+  ]
+}

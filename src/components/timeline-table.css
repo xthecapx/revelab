@@ -1,0 +1,87 @@
+.reveal .timeline-table {
+    font-size: 0.32em;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 0.8em;
+}
+
+.reveal .timeline-table th,
+.reveal .timeline-table td {
+    border: none !important;
+    text-align: center;
+    vertical-align: middle !important;
+    padding: 4px;
+}
+
+.reveal .timeline-table th + th,
+.reveal .timeline-table td + td {
+    border-left: 1px dashed var(--rui-color-faint) !important;
+}
+
+.reveal .timeline-table .tl-phase {
+    font-weight: 600;
+    padding: 5px 6px;
+}
+
+.reveal .timeline-table .tl-odd {
+    background: #f8f8f8;
+}
+
+.reveal .timeline-table .tl-now-col {
+    background: rgba(220, 53, 69, 0.07);
+    border-left: 1px solid var(--rui-color-danger) !important;
+    border-right: 1px solid var(--rui-color-danger) !important;
+}
+
+.reveal .timeline-table .tl-now {
+    color: var(--rui-color-danger);
+    font-weight: 700;
+}
+
+.reveal .timeline-table .tl-done     { background: var(--rui-color-success); color: #fff; }
+.reveal .timeline-table .tl-progress  { background: var(--rui-color-warning); color: #fff; }
+.reveal .timeline-table .tl-proposed  { background: #6c757d; color: #fff; }
+
+.reveal .timeline-table .tl-pub-done {
+    background: #0f6b3a;
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid #0a4f2a !important;
+    border-left: 1px dashed var(--rui-color-faint) !important;
+}
+
+.reveal .timeline-table .tl-pub-progress {
+    background: #c7880a;
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid #9a6b08 !important;
+    border-left: 1px dashed var(--rui-color-faint) !important;
+}
+
+.reveal .timeline-table .tl-pub-proposed {
+    background: #4a5058;
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid #343a40 !important;
+    border-left: 1px dashed var(--rui-color-faint) !important;
+}
+
+.reveal .timeline-table .tl-sub {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.85em;
+}
+
+.reveal .timeline-legend {
+    font-size: 0.35em;
+    margin-top: 0.4em;
+    text-align: center;
+}
+
+.reveal .timeline-legend span {
+    color: #fff;
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+    margin: 0 0.15em;
+}

@@ -1,0 +1,19 @@
+.reveal .slides section.big-question {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+}
+
+.big-question-text {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--rui-color-text);
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+}
+
+.big-question-sub {
+    font-size: 0.7em;
+    color: var(--rui-color-muted);
+    font-style: italic;
+}

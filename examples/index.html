@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>revelab — Component Styleguide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/serif.css">
+  <link rel="stylesheet" href="../dist/revelab.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title -->
+      <section class="title-slide">
+        <h2>revelab</h2>
+        <p class="text-lg">Slide components for Reveal.js</p>
+        <p class="small-muted text-sm">Navigate with arrow keys →</p>
+      </section>
+
+      <!-- Diagram Flow -->
+      <section>
+        <h3>Diagram Flow</h3>
+        <div class="slide-content">
+          <div class="diagram-flow">
+            <div class="df-box bg-input">
+              👨‍💻 <strong>Input</strong><br>
+              <small>user request</small>
+            </div>
+            <div class="df-arrow">→</div>
+            <div class="df-box bg-cool">
+              🔧 <strong>Process</strong><br>
+              <small>transform data</small>
+            </div>
+            <div class="df-arrow">→</div>
+            <div class="df-box bg-warm">
+              📊 <strong>Output</strong><br>
+              <small>result</small>
+            </div>
+          </div>
+          <p class="caption text-sm" style="text-align:center; margin-top:0.5em;">
+            .diagram-flow > .df-box + .df-arrow
+          </p>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section>
+        <h3>Cards</h3>
+        <div class="slide-content">
+          <div style="display:flex; gap:0.6em;">
+            <div class="card" style="flex:1;">
+              <div class="card-header">Card Header</div>
+              <div class="card-body text-sm">Card body content</div>
+            </div>
+            <div class="card" style="flex:1;">
+              <div class="card-header">With Table</div>
+              <div class="card-body">
+                <table class="table table-sm">
+                  <thead><tr><th>A</th><th>B</th></tr></thead>
+                  <tbody><tr><td>1</td><td>2</td></tr></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Row -->
+      <section>
+        <h3>Stats Row + Highlight Numbers</h3>
+        <div class="slide-content">
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="highlight-number">84.5%</div>
+              <div class="highlight-unit">accuracy</div>
+            </div>
+            <div class="stat-item">
+              <div class="highlight-number">4B</div>
+              <div class="highlight-unit">parameters</div>
+            </div>
+            <div class="stat-item">
+              <div class="highlight-number">10x</div>
+              <div class="highlight-unit">cheaper</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Principle Grid -->
+      <section>
+        <h3>Principle Grid</h3>
+        <div class="slide-content">
+          <div class="principle-grid">
+            <div class="principle-card">
+              <span class="pc-number">1</span>
+              <span class="pc-title">Modularity</span>
+              <span class="pc-sub">One agent per task</span>
+            </div>
+            <div class="principle-card">
+              <span class="pc-number">2</span>
+              <span class="pc-title">Determinism</span>
+              <span class="pc-sub">Reproducible outputs</span>
+            </div>
+            <div class="principle-card">
+              <span class="pc-number">3</span>
+              <span class="pc-title">Context</span>
+              <span class="pc-sub">RAG + knowledge graphs</span>
+            </div>
+            <div class="principle-card">
+              <span class="pc-number">4</span>
+              <span class="pc-title">Human expertise</span>
+              <span class="pc-sub">Codified domain logic</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hallucination Box -->
+      <section>
+        <h3>Hallucination Box</h3>
+        <div class="slide-content">
+          <div class="hallucination-box">
+            <div class="hb-label">HALLUCINATION</div>
+            <p class="hb-prompt">$ ask "How do I deploy to AWS?"</p>
+            <p class="hb-response">Use the AWS SDK v3.2.1 with the deploy() method...</p>
+            <p class="hb-error">⚠ The SDK version does not exist. The method does not exist.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Emoji Row -->
+      <section>
+        <h3>Emoji Row</h3>
+        <div class="slide-content">
+          <div class="emoji-row">🧠 🔀 💥 🎯 ✅</div>
+          <p class="caption text-sm" style="text-align:center; margin-top:0.5em;">
+            .emoji-row
+          </p>
+        </div>
+      </section>
+
+      <!-- Font Sizes -->
+      <section>
+        <h3>Font Size Scale</h3>
+        <div class="slide-content">
+          <p class="text-xs">.text-xs — 0.6em</p>
+          <p class="text-sm">.text-sm — 0.7em</p>
+          <p class="text-base">.text-base — 0.8em</p>
+          <p class="text-lg">.text-lg — 0.85em</p>
+          <p class="text-xl">.text-xl — 0.9em</p>
+        </div>
+      </section>
+
+      <!-- Backgrounds -->
+      <section>
+        <h3>Background Colors</h3>
+        <div class="slide-content">
+          <div class="diagram-flow">
+            <div class="df-box bg-input">.bg-input</div>
+            <div class="df-box bg-cool">.bg-cool</div>
+            <div class="df-box bg-warm">.bg-warm</div>
+            <div class="df-box bg-purple">.bg-purple</div>
+            <div class="df-box bg-danger-light">.bg-danger-light</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layouts -->
+      <section class="divider">
+        <h2>Divider Layout</h2>
+        <p class="small-muted text-base">Section break — centered content</p>
+      </section>
+
+      <section class="big-question">
+        <div class="big-question-text">Is this a big question?</div>
+        <div class="big-question-sub">Yes, it is.</div>
+      </section>
+
+      <!-- End -->
+      <section class="title-slide">
+        <h2>revelab</h2>
+        <p class="text-lg">github.com/xthecapx/revelab</p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'none',
+      center: false,
+      margin: 0.08
+    });
+  </script>
+</body>
+</html>

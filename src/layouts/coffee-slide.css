@@ -1,0 +1,6 @@
+.reveal .slides section.coffee-slide {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    background: linear-gradient(135deg, #fdf6ec 0%, #fbe8cc 100%);
+}

@@ -1,0 +1,82 @@
+.sigmoid-chart {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    margin: 0 auto 0.4em;
+}
+
+.sigmoid-curve {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid var(--rui-color-muted);
+    border-bottom: 2px solid var(--rui-color-muted);
+}
+
+.sigmoid-path {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sigmoid-zone {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.55em;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 0.3em;
+}
+
+.sigmoid-zone-fast {
+    left: 5%;
+    width: 25%;
+    height: 85%;
+    border-right: 1px dashed var(--rui-color-faint);
+    color: var(--rui-color-success);
+}
+
+.sigmoid-zone-plateau {
+    right: 5%;
+    width: 30%;
+    height: 30%;
+    border-left: 1px dashed var(--rui-color-faint);
+    color: var(--rui-color-danger);
+}
+
+.sigmoid-axis-label {
+    position: absolute;
+    font-size: 0.5em;
+    color: var(--rui-color-muted);
+}
+
+.sigmoid-y-label {
+    left: -2.5em;
+    top: 50%;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left center;
+    white-space: nowrap;
+}
+
+.sigmoid-x-label {
+    bottom: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.sigmoid-y-top {
+    left: -1.5em;
+    top: 0;
+    font-size: 0.5em;
+    color: var(--rui-color-muted);
+}
+
+.sigmoid-y-bottom {
+    left: -1.5em;
+    bottom: 0;
+    font-size: 0.5em;
+    color: var(--rui-color-muted);
+}

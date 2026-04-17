@@ -1,0 +1,33 @@
+:root {
+    --rui-color-text:       #1a1a1a;
+    --rui-color-muted:      #666;
+    --rui-color-faint:      #999;
+
+    --rui-color-accent:     #6366f1;
+    --rui-color-danger:     #dc3545;
+    --rui-color-success:    #198754;
+    --rui-color-warning:    #f0ad4e;
+
+    --rui-color-border:     #ccc;
+    --rui-color-bg-light:   #f8f9fa;
+    --rui-color-bg-surface: #f5f5f5;
+    --rui-color-bg-code:    #1e1e2e;
+
+    --rui-radius-sm: 4px;
+    --rui-radius-md: 8px;
+
+    /* Short aliases for inline-style convenience */
+    --color-text:       var(--rui-color-text);
+    --color-muted:      var(--rui-color-muted);
+    --color-faint:      var(--rui-color-faint);
+    --color-accent:     var(--rui-color-accent);
+    --color-danger:     var(--rui-color-danger);
+    --color-success:    var(--rui-color-success);
+    --color-warning:    var(--rui-color-warning);
+    --color-border:     var(--rui-color-border);
+    --color-bg-light:   var(--rui-color-bg-light);
+    --color-bg-surface: var(--rui-color-bg-surface);
+    --color-bg-code:    var(--rui-color-bg-code);
+    --radius-sm:        var(--rui-radius-sm);
+    --radius-md:        var(--rui-radius-md);
+}

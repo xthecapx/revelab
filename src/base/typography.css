@@ -1,0 +1,10 @@
+.reveal h3 {
+    font-size: 1.2em;
+    color: var(--rui-color-text);
+    margin-bottom: 0.5em;
+    flex-shrink: 0;
+}
+
+.reveal ul, .reveal ol {
+    text-align: left;
+}

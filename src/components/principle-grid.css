@@ -1,0 +1,33 @@
+.principle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+}
+
+.principle-card {
+    border: 2px solid var(--rui-color-border);
+    border-radius: var(--rui-radius-md);
+    padding: 0.8em;
+    text-align: center;
+}
+
+.pc-number {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--rui-color-accent);
+    display: block;
+}
+
+.pc-title {
+    font-weight: 700;
+    font-size: 0.85em;
+    display: block;
+    margin-top: 0.2em;
+}
+
+.pc-sub {
+    font-size: 0.7em;
+    color: var(--rui-color-muted);
+    display: block;
+    margin-top: 0.2em;
+}

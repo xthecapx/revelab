@@ -1,0 +1,11 @@
+.stats-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    align-items: flex-start;
+}
+
+.stat-item {
+    text-align: center;
+}

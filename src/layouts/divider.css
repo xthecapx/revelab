@@ -1,0 +1,4 @@
+.reveal .slides section.divider {
+    justify-content: center !important;
+    align-items: center !important;
+}

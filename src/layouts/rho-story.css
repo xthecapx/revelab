@@ -1,0 +1,38 @@
+.reveal .slides section.rho-story {
+    border-left: 4px solid;
+    border-image: linear-gradient(180deg, var(--rui-color-accent), #8b5cf6, #a78bfa) 1;
+    padding-left: 1em !important;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.03) 0%, transparent 30%);
+}
+
+.reveal .slides section.rho-story h3::before {
+    content: "\03C1 ";
+    color: var(--rui-color-accent);
+    font-style: italic;
+}
+
+.reveal .slides section > .rho-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.4em;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+.reveal .slides section > .rho-title > h3 {
+    margin-bottom: 0 !important;
+}
+
+.rho-avatar {
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: var(--rui-radius-md);
+    object-fit: cover;
+    border: 2px solid var(--rui-color-accent);
+    flex-shrink: 0;
+}
+
+.reveal .slides section.rho-divider {
+    justify-content: center !important;
+    align-items: center !important;
+}

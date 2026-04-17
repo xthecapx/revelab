@@ -1,0 +1,21 @@
+.diagram-flow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    font-size: 0.65em;
+}
+
+.df-box {
+    border: 2px solid var(--rui-color-border);
+    border-radius: var(--rui-radius-md);
+    padding: 0.4em 0.8em;
+    text-align: center;
+    background: var(--rui-color-bg-light);
+}
+
+.df-arrow {
+    color: #7F8C8D;
+    font-size: 1.4em;
+}

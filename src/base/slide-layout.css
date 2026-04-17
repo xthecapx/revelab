@@ -1,0 +1,33 @@
+.reveal .slides section {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    height: 100% !important;
+    padding-top: 0.5em !important;
+}
+
+.reveal .slides section > h3 {
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+.reveal .slides section > .slide-content {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    min-height: 0 !important;
+}
+
+.reveal .slide-background.present.water::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+}

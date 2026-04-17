@@ -1,0 +1,33 @@
+.hallucination-box {
+    background: var(--rui-color-bg-code);
+    color: #cdd6f4;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.72em;
+    border-radius: var(--rui-radius-md);
+    padding: 1em 1.2em;
+    text-align: left;
+    position: relative;
+}
+
+.hb-prompt  { color: #89b4fa; }
+.hb-response { color: #a6e3a1; }
+
+.hb-error {
+    color: #f38ba8;
+    background: rgba(243, 139, 168, 0.15);
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+.hb-label {
+    display: inline-block;
+    background: var(--rui-color-danger);
+    color: #fff;
+    font-size: 0.65em;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-bottom: 0.4em;
+    letter-spacing: 0.05em;
+    font-family: sans-serif;
+}
