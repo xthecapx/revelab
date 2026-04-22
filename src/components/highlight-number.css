@@ -1,12 +1,12 @@
 .highlight-number {
     font-size: 2em;
     font-weight: 700;
-    color: var(--rui-color-danger);
+    color: var(--rlab-color-danger);
     line-height: 1.1;
 }
 
 .highlight-unit {
     font-size: 0.7em;
-    color: var(--rui-color-muted);
+    color: var(--rlab-color-muted);
     font-weight: 400;
 }

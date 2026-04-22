@@ -1,9 +1,10 @@
-.small-muted {
-    color: var(--rui-color-muted);
+.small-muted,
+.text-muted {
+    color: var(--rlab-color-muted);
 }
 
 .reveal p.caption {
-    color: var(--rui-color-muted);
+    color: var(--rlab-color-muted);
     font-style: italic;
     margin: 0.3em 0 0;
 }

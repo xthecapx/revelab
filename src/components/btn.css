@@ -1,0 +1,20 @@
+.btn {
+    display: inline-block;
+    padding: 0.4em 1em;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: var(--rlab-radius-sm);
+    cursor: pointer;
+    transition: opacity 0.2s;
+    color: #fff;
+    background-color: var(--rlab-color-accent);
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn-warning { background-color: var(--rlab-color-warning); color: #fff; }
+.btn-danger  { background-color: var(--rlab-color-danger); color: #fff; }
+.btn-success { background-color: var(--rlab-color-success); color: #fff; }

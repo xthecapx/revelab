@@ -5,8 +5,8 @@
 }
 
 .principle-card {
-    border: 2px solid var(--rui-color-border);
-    border-radius: var(--rui-radius-md);
+    border: 2px solid var(--rlab-color-border);
+    border-radius: var(--rlab-radius-md);
     padding: 0.8em;
     text-align: center;
 }
@@ -14,7 +14,7 @@
 .pc-number {
     font-size: 1.4em;
     font-weight: 700;
-    color: var(--rui-color-accent);
+    color: var(--rlab-color-accent);
     display: block;
 }
 
@@ -27,7 +27,7 @@
 
 .pc-sub {
     font-size: 0.7em;
-    color: var(--rui-color-muted);
+    color: var(--rlab-color-muted);
     display: block;
     margin-top: 0.2em;
 }

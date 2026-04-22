@@ -5,6 +5,27 @@
     align-items: stretch !important;
     height: 100% !important;
     padding-top: 0.5em !important;
+    color: var(--rlab-color-text);
+}
+
+.reveal-viewport {
+    background-color: var(--r-background-color, var(--rlab-color-bg, #fff));
+}
+
+.reveal {
+    color: var(--r-main-color, var(--rlab-color-text));
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    color: var(--r-heading-color, var(--rlab-color-text));
+}
+
+.reveal a {
+    color: var(--r-link-color, var(--rlab-color-accent));
+}
+
+.reveal a:hover {
+    color: var(--r-link-color-hover, var(--rlab-color-accent));
 }
 
 .reveal .slides section > h3 {

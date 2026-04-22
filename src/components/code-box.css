@@ -1,27 +1,27 @@
-.hallucination-box {
-    background: var(--rui-color-bg-code);
+.code-box {
+    background: var(--rlab-color-bg-code);
     color: #cdd6f4;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.72em;
-    border-radius: var(--rui-radius-md);
+    border-radius: var(--rlab-radius-md);
     padding: 1em 1.2em;
     text-align: left;
     position: relative;
 }
 
-.hb-prompt  { color: #89b4fa; }
-.hb-response { color: #a6e3a1; }
+.cb-prompt  { color: #89b4fa; }
+.cb-response { color: #a6e3a1; }
 
-.hb-error {
+.cb-error {
     color: #f38ba8;
     background: rgba(243, 139, 168, 0.15);
     border-radius: 3px;
     padding: 0 2px;
 }
 
-.hb-label {
+.cb-label {
     display: inline-block;
-    background: var(--rui-color-danger);
+    background: var(--rlab-color-danger);
     color: #fff;
     font-size: 0.65em;
     font-weight: 700;

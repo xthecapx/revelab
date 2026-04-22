@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>revelab — Component Styleguide</title>
+  <title>revelab — Dev</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/serif.css">
-  <link rel="stylesheet" href="../dist/revelab.css">
+  <script type="module" src="./main.js"></script>
 </head>
 <body>
   <div class="reveal">
@@ -52,11 +52,15 @@
         <div class="slide-content">
           <div style="display:flex; gap:0.6em;">
             <div class="card" style="flex:1;">
-              <div class="card-header">Card Header</div>
-              <div class="card-body text-sm">Card body content</div>
+              <div class="card-header">Default</div>
+              <div class="card-body text-sm">Uses theme colors</div>
             </div>
-            <div class="card" style="flex:1;">
-              <div class="card-header">With Table</div>
+            <div class="card" style="flex:1; --rlab-color-card-header-bg: #198754; --rlab-color-card-header-text: #fff;">
+              <div class="card-header">Custom</div>
+              <div class="card-body text-sm">Green header via CSS vars</div>
+            </div>
+            <div class="card" style="flex:1; --rlab-color-card-header-bg: #dc3545;">
+              <div class="card-header">Danger</div>
               <div class="card-body">
                 <table class="table table-sm">
                   <thead><tr><th>A</th><th>B</th></tr></thead>
@@ -188,6 +192,13 @@
     </div>
   </div>
 
+  <div id="theme-switcher" style="position:fixed; top:10px; right:10px; z-index:9999; display:flex; gap:4px;">
+    <button data-theme="" style="padding:4px 8px; font-size:12px; cursor:pointer; border:1px solid #ccc; border-radius:4px; background:#fff; color:#1a1a1a;">Default</button>
+    <button data-theme="theme-forest" style="padding:4px 8px; font-size:12px; cursor:pointer; border:1px solid #ccc; border-radius:4px; background:#3A6B35; color:#fff;">Forest</button>
+    <button data-theme="theme-midnight" style="padding:4px 8px; font-size:12px; cursor:pointer; border:1px solid #ccc; border-radius:4px; background:#0d1117; color:#B165FB;">Midnight</button>
+    <button data-theme="theme-coral" style="padding:4px 8px; font-size:12px; cursor:pointer; border:1px solid #ccc; border-radius:4px; background:#F8275B; color:#fff;">Coral</button>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
   <script>
     Reveal.initialize({
@@ -196,6 +207,14 @@
       transition: 'none',
       center: false,
       margin: 0.08
+    });
+
+    var themes = ['theme-forest', 'theme-midnight', 'theme-coral'];
+    document.getElementById('theme-switcher').addEventListener('click', function(e) {
+      if (!e.target.dataset.theme && e.target.dataset.theme !== '') return;
+      var viewport = document.querySelector('.reveal-viewport') || document.body;
+      themes.forEach(function(t) { viewport.classList.remove(t); });
+      if (e.target.dataset.theme) viewport.classList.add(e.target.dataset.theme);
     });
   </script>
 </body>

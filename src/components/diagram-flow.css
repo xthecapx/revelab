@@ -8,11 +8,11 @@
 }
 
 .df-box {
-    border: 2px solid var(--rui-color-border);
-    border-radius: var(--rui-radius-md);
+    border: 2px solid var(--rlab-color-border);
+    border-radius: var(--rlab-radius-md);
     padding: 0.4em 0.8em;
     text-align: center;
-    background: var(--rui-color-bg-light);
+    background-color: var(--rlab-color-bg-light);
 }
 
 .df-arrow {

@@ -1,11 +1,12 @@
 {
   "name": "revelab",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Slide components for Reveal.js presentations — works standalone or as a Tailwind CSS plugin",
   "main": "index.js",
   "style": "dist/revelab.css",
   "packageManager": "pnpm@10.8.1",
   "scripts": {
+    "dev": "vite",
     "build": "node build.js"
   },
   "keywords": [
@@ -19,7 +20,7 @@
     "css",
     "components"
   ],
-  "author": "Cristian Marquez <xthecapx>",
+  "author": "Thecap",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -39,7 +40,8 @@
   },
   "devDependencies": {
     "lightningcss": "^1.32.0",
-    "tailwindcss": "^4.0.0"
+    "tailwindcss": "^4.0.0",
+    "vite": "8"
   },
   "files": [
     "index.js",

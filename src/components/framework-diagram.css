@@ -55,8 +55,8 @@
 }
 
 .fw-stage {
-    border: 2px solid var(--rui-color-border);
-    border-radius: var(--rui-radius-md);
+    border: 2px solid var(--rlab-color-border);
+    border-radius: var(--rlab-radius-md);
     padding: 10px 10px 12px;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@
 }
 
 .fw-subgroup {
-    border: 1px solid var(--rui-color-border);
+    border: 1px solid var(--rlab-color-border);
     border-radius: 6px;
     padding: 6px 8px;
     display: flex;
@@ -117,8 +117,8 @@
 .fw-card {
     display: inline-block;
     background: #fff;
-    border: 1px solid var(--rui-color-border);
-    border-radius: var(--rui-radius-sm);
+    border: 1px solid var(--rlab-color-border);
+    border-radius: var(--rlab-radius-sm);
     padding: 3px 8px;
     text-align: center;
     font-weight: 600;
@@ -212,7 +212,7 @@
 
 .fw-target-card {
     background: #fff;
-    border: 1.5px solid var(--rui-color-border);
+    border: 1.5px solid var(--rlab-color-border);
     border-radius: 6px;
     padding: 8px 6px;
     text-align: center;
@@ -233,7 +233,7 @@
     text-align: center;
     background: #F4F6F7;
     border: 1px solid #ABB2B9;
-    border-radius: var(--rui-radius-sm);
+    border-radius: var(--rlab-radius-sm);
     padding: 4px 8px;
     font-size: 0.85em;
     color: #5D6D7E;

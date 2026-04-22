@@ -5,7 +5,7 @@ const { brotliCompress, constants } = require("zlib");
 
 const { version } = require("./package.json");
 
-const dirs = ["themes", "base", "utilities", "components", "layouts"];
+const dirs = ["themes", "base", "components", "layouts", "utilities"];
 const banner = `/* revelab — Slide components for Reveal.js */\n/* https://github.com/xthecapx/revelab */\n`;
 const minBanner = `/* revelab v${version} | MIT | github.com/xthecapx/revelab */\n`;
 

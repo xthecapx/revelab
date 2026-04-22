@@ -1,0 +1,12 @@
+{
+  "name": "revelab",
+  "description": "Reveal.js slide components — skill, agent, and CSS library for creating presentations",
+  "version": "0.1.0",
+  "author": {
+    "name": "Thecap"
+  },
+  "homepage": "https://github.com/xthecapx/revelab",
+  "repository": "https://github.com/xthecapx/revelab",
+  "license": "MIT",
+  "keywords": ["reveal.js", "slides", "presentation", "css"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "revelab-marketplace",
+  "owner": {
+    "name": "Thecap"
+  },
+  "metadata": {
+    "description": "Reveal.js presentation components for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "revelab",
+      "source": "./",
+      "description": "Reveal.js slide components — skill, agent, and CSS library for creating presentations"
+    }
+  ]
+}

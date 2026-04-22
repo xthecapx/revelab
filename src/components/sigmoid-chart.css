@@ -9,8 +9,8 @@
     position: relative;
     width: 100%;
     height: 100%;
-    border-left: 2px solid var(--rui-color-muted);
-    border-bottom: 2px solid var(--rui-color-muted);
+    border-left: 2px solid var(--rlab-color-muted);
+    border-bottom: 2px solid var(--rlab-color-muted);
 }
 
 .sigmoid-path {
@@ -34,22 +34,22 @@
     left: 5%;
     width: 25%;
     height: 85%;
-    border-right: 1px dashed var(--rui-color-faint);
-    color: var(--rui-color-success);
+    border-right: 1px dashed var(--rlab-color-faint);
+    color: var(--rlab-color-success);
 }
 
 .sigmoid-zone-plateau {
     right: 5%;
     width: 30%;
     height: 30%;
-    border-left: 1px dashed var(--rui-color-faint);
-    color: var(--rui-color-danger);
+    border-left: 1px dashed var(--rlab-color-faint);
+    color: var(--rlab-color-danger);
 }
 
 .sigmoid-axis-label {
     position: absolute;
     font-size: 0.5em;
-    color: var(--rui-color-muted);
+    color: var(--rlab-color-muted);
 }
 
 .sigmoid-y-label {
@@ -71,12 +71,12 @@
     left: -1.5em;
     top: 0;
     font-size: 0.5em;
-    color: var(--rui-color-muted);
+    color: var(--rlab-color-muted);
 }
 
 .sigmoid-y-bottom {
     left: -1.5em;
     bottom: 0;
     font-size: 0.5em;
-    color: var(--rui-color-muted);
+    color: var(--rlab-color-muted);
 }

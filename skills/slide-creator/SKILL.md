@@ -3,9 +3,11 @@ name: revelab-slide-creator
 description: Create and edit Reveal.js presentation slides using revelab components. Use when the user mentions slides, presentations, talks, or wants to present content.
 ---
 
-# RevealUI Slide Creator
+# revelab Slide Creator
 
 Create Reveal.js slides using the revelab component library. This skill generates HTML slides with proper component classes, layouts, and theming.
+
+> For advanced Reveal.js features (transitions, fragments, auto-animate, backgrounds, code highlighting), see `references/advanced-features.md`.
 
 ## When to use
 
@@ -69,11 +71,42 @@ Horizontal flow: box → arrow → box. Use for processes, architectures, pipeli
 ```
 
 ### card
-Content card with header + body. Tables auto-fill.
+Content card with header + body. Tables auto-fill inside card-body.
 ```html
 <div class="card">
   <div class="card-header">Title</div>
   <div class="card-body text-sm">Content</div>
+</div>
+```
+
+**Card color modifiers** — change header background by adding a class to the card:
+
+| Class | Header color |
+|-------|-------------|
+| `card-danger` | Red (`--rlab-color-danger`) |
+| `card-success` | Green (`--rlab-color-success`) |
+| `card-warning` | Yellow (`--rlab-color-warning`) |
+| `card-neutral` | Surface bg, normal text color |
+
+```html
+<div class="card card-danger">
+  <div class="card-header">Error</div>
+  <div class="card-body text-sm">Something went wrong</div>
+</div>
+```
+
+**Card body alignment** — default is centered. Use `card-body-left` for left-aligned content:
+```html
+<div class="card-body card-body-left text-sm">Left-aligned paragraphs</div>
+```
+
+**Tables in cards** — tables inside `card-body` auto-fill width with no extra borders. Use `table-sm` for compact tables:
+```html
+<div class="card-body">
+  <table class="table-sm">
+    <thead><tr><th>Key</th><th>Value</th></tr></thead>
+    <tbody><tr><td>Accuracy</td><td>99%</td></tr></tbody>
+  </table>
 </div>
 ```
 
@@ -100,14 +133,14 @@ Side-by-side statistics.
 </div>
 ```
 
-### hallucination-box
+### code-box
 Terminal-style display for code/errors.
 ```html
-<div class="hallucination-box">
-  <div class="hb-label">LABEL</div>
-  <p class="hb-prompt">$ command</p>
-  <p class="hb-response">response text</p>
-  <p class="hb-error">⚠ error message</p>
+<div class="code-box">
+  <div class="cb-label">LABEL</div>
+  <p class="cb-prompt">$ command</p>
+  <p class="cb-response">response text</p>
+  <p class="cb-error">⚠ error message</p>
 </div>
 ```
 
@@ -118,6 +151,15 @@ QR code with link button.
   <img src="qr.png" alt="QR">
   <a href="https://example.com" class="btn btn-warning">Link</a>
 </div>
+```
+
+### btn
+Styled buttons and links.
+```html
+<a href="#" class="btn">Default</a>
+<a href="#" class="btn btn-warning">Warning</a>
+<a href="#" class="btn btn-danger">Danger</a>
+<a href="#" class="btn btn-success">Success</a>
 ```
 
 ### emoji-row
@@ -138,8 +180,56 @@ QR code with link button.
 ## Utility classes
 
 - Font sizes: `.text-xs`, `.text-sm`, `.text-base`, `.text-lg`, `.text-xl`
-- Text: `.small-muted`, `.caption` (on `<p>`), `.on-dark`, `.text-bg`
+- Text: `.small-muted`, `.text-muted`, `.caption` (on `<p>`), `.on-dark`, `.text-bg`
 - Backgrounds: `.bg-warm`, `.bg-cool`, `.bg-input`, `.bg-purple`, `.bg-danger-light`
+
+## Transitions & animations
+
+Use Reveal.js built-in features — never custom JS/CSS for slide animations.
+
+### Slide transitions
+Set per-slide via `data-transition` or globally in `Reveal.initialize()`.
+Values: `fade`, `slide`, `convex`, `concave`, `zoom`, `none`
+
+```html
+<section data-transition="fade">Content</section>
+<section data-transition="slide-in fade-out">Combined</section>
+```
+
+### Fragments (step-by-step reveals)
+```html
+<p class="fragment fade-up">Appears on click</p>
+<p class="fragment fade-up" data-fragment-index="2">Second</p>
+```
+
+Fragment classes: `fade-in`, `fade-out`, `fade-up`, `fade-down`, `fade-left`, `fade-right`, `highlight-red`, `highlight-green`, `highlight-blue`, `strike`
+
+### Auto-animate
+Smoothly animate matching elements between slides using `data-auto-animate` + `data-id`:
+
+```html
+<section data-auto-animate>
+  <div data-id="box" style="width:100px; background:var(--rlab-color-accent);"></div>
+</section>
+<section data-auto-animate>
+  <div data-id="box" style="width:300px; background:var(--rlab-color-success);"></div>
+</section>
+```
+
+### Slide backgrounds
+```html
+<section data-background-color="#0d1117">Dark</section>
+<section data-background-gradient="linear-gradient(to right, #6366f1, #a78bfa)">Gradient</section>
+```
+
+## Themes
+
+Apply theme class to `.reveal-viewport`: `theme-forest`, `theme-midnight`, `theme-coral`, or no class for default.
+
+CSS variables use `--rlab-*` prefix. Override per-element:
+```html
+<div class="card" style="--rlab-color-card-header-bg: #198754;">Custom card</div>
+```
 
 ## Design principles
 

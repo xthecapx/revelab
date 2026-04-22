@@ -16,7 +16,7 @@
 
 .reveal .timeline-table th + th,
 .reveal .timeline-table td + td {
-    border-left: 1px dashed var(--rui-color-faint) !important;
+    border-left: 1px dashed var(--rlab-color-faint) !important;
 }
 
 .reveal .timeline-table .tl-phase {
@@ -30,17 +30,17 @@
 
 .reveal .timeline-table .tl-now-col {
     background: rgba(220, 53, 69, 0.07);
-    border-left: 1px solid var(--rui-color-danger) !important;
-    border-right: 1px solid var(--rui-color-danger) !important;
+    border-left: 1px solid var(--rlab-color-danger) !important;
+    border-right: 1px solid var(--rlab-color-danger) !important;
 }
 
 .reveal .timeline-table .tl-now {
-    color: var(--rui-color-danger);
+    color: var(--rlab-color-danger);
     font-weight: 700;
 }
 
-.reveal .timeline-table .tl-done     { background: var(--rui-color-success); color: #fff; }
-.reveal .timeline-table .tl-progress  { background: var(--rui-color-warning); color: #fff; }
+.reveal .timeline-table .tl-done     { background: var(--rlab-color-success); color: #fff; }
+.reveal .timeline-table .tl-progress  { background: var(--rlab-color-warning); color: #fff; }
 .reveal .timeline-table .tl-proposed  { background: #6c757d; color: #fff; }
 
 .reveal .timeline-table .tl-pub-done {
@@ -48,7 +48,7 @@
     color: #fff;
     font-weight: 700;
     border: 2px solid #0a4f2a !important;
-    border-left: 1px dashed var(--rui-color-faint) !important;
+    border-left: 1px dashed var(--rlab-color-faint) !important;
 }
 
 .reveal .timeline-table .tl-pub-progress {
@@ -56,7 +56,7 @@
     color: #fff;
     font-weight: 700;
     border: 2px solid #9a6b08 !important;
-    border-left: 1px dashed var(--rui-color-faint) !important;
+    border-left: 1px dashed var(--rlab-color-faint) !important;
 }
 
 .reveal .timeline-table .tl-pub-proposed {
@@ -64,7 +64,7 @@
     color: #fff;
     font-weight: 700;
     border: 2px solid #343a40 !important;
-    border-left: 1px dashed var(--rui-color-faint) !important;
+    border-left: 1px dashed var(--rlab-color-faint) !important;
 }
 
 .reveal .timeline-table .tl-sub {

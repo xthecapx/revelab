@@ -1,13 +1,13 @@
 .reveal .slides section.rho-story {
     border-left: 4px solid;
-    border-image: linear-gradient(180deg, var(--rui-color-accent), #8b5cf6, #a78bfa) 1;
+    border-image: linear-gradient(180deg, var(--rlab-color-accent), #8b5cf6, #a78bfa) 1;
     padding-left: 1em !important;
     background: linear-gradient(90deg, rgba(99, 102, 241, 0.03) 0%, transparent 30%);
 }
 
 .reveal .slides section.rho-story h3::before {
     content: "\03C1 ";
-    color: var(--rui-color-accent);
+    color: var(--rlab-color-accent);
     font-style: italic;
 }
 
@@ -26,9 +26,9 @@
 .rho-avatar {
     width: 1.4em;
     height: 1.4em;
-    border-radius: var(--rui-radius-md);
+    border-radius: var(--rlab-radius-md);
     object-fit: cover;
-    border: 2px solid var(--rui-color-accent);
+    border: 2px solid var(--rlab-color-accent);
     flex-shrink: 0;
 }
 

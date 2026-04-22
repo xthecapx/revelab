@@ -3,7 +3,7 @@
     color: #333 !important;
     background-color: rgba(240, 240, 240, 0.8) !important;
     padding: 4px 10px !important;
-    border-radius: var(--rui-radius-sm) !important;
+    border-radius: var(--rlab-radius-sm) !important;
     right: auto !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
