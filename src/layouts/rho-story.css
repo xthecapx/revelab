@@ -6,9 +6,10 @@
 }
 
 .reveal .slides section.rho-story h3::before {
-    content: "\03C1 ";
+    content: "\03C1";
     color: var(--rlab-color-accent);
     font-style: italic;
+    margin-right: 0.2em;
 }
 
 .reveal .slides section > .rho-title {
