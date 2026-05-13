@@ -36,6 +36,40 @@
     --rlab-color-card-header-text: var(--rlab-color-text);
 }
 
+/* Soft-tint variants — light tinted header bg, dark readable text, colored border.
+   Use when a solid header would dominate the slide visually. */
+.reveal .card-accent-soft {
+    --rlab-color-card-header-bg: rgba(99, 102, 241, 0.12);
+    --rlab-color-card-header-text: var(--rlab-color-text);
+    border-color: var(--rlab-color-accent);
+    border-width: 2px;
+}
+.reveal .card-success-soft {
+    --rlab-color-card-header-bg: rgba(25, 135, 84, 0.12);
+    --rlab-color-card-header-text: var(--rlab-color-text);
+    border-color: var(--rlab-color-success);
+}
+.reveal .card-warning-soft {
+    --rlab-color-card-header-bg: rgba(243, 156, 18, 0.12);
+    --rlab-color-card-header-text: var(--rlab-color-text);
+    border-color: var(--rlab-color-warning);
+}
+.reveal .card-danger-soft {
+    --rlab-color-card-header-bg: rgba(220, 53, 69, 0.12);
+    --rlab-color-card-header-text: var(--rlab-color-text);
+    border-color: var(--rlab-color-danger);
+}
+.reveal .card-teal-soft {
+    --rlab-color-card-header-bg: rgba(22, 160, 133, 0.12);
+    --rlab-color-card-header-text: var(--rlab-color-text);
+    border-color: #16A085;
+}
+.reveal .card-amber-soft {
+    --rlab-color-card-header-bg: rgba(243, 156, 18, 0.12);
+    --rlab-color-card-header-text: var(--rlab-color-text);
+    border-color: #F39C12;
+}
+
 .reveal .card-body:has(table) {
     padding: 0 !important;
 }

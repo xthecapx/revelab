@@ -1,0 +1,66 @@
+/* Research / comparison table — accent header, zebra striping,
+   per-column emphasis, per-cell highlight.
+
+   Usage:
+       <table class="table-research">
+           <thead>
+               <tr>
+                   <th>...</th>
+                   <th class="col-highlight">Important Column</th>
+                   ...
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>...</td>
+                   <td class="col-highlight">value</td>
+                   <td class="cell-strong">99% / 0.95</td>
+               </tr>
+           </tbody>
+       </table>
+*/
+.reveal table.table-research {
+    width: 100%;
+    font-size: 1em;
+}
+
+.reveal table.table-research thead th {
+    background: var(--rlab-color-accent) !important;
+    color: #fff !important;
+    font-weight: 700;
+    padding: 0.5em 0.75em;
+    border-color: var(--rlab-color-accent) !important;
+    text-align: left;
+}
+
+.reveal table.table-research tbody td {
+    padding: 0.4em 0.75em;
+    vertical-align: middle;
+}
+
+.reveal table.table-research tbody tr:nth-child(even) td {
+    background: var(--rlab-color-bg-light);
+}
+
+.reveal table.table-research tbody tr:hover td {
+    background: rgba(99, 102, 241, 0.06);
+}
+
+/* Column emphasis — darker accent in header, light tint in body */
+.reveal table.table-research thead th.col-highlight {
+    background: #4338ca !important;
+    color: #fff !important;
+    box-shadow: inset 0 -3px 0 #facc15;
+}
+
+.reveal table.table-research tbody td.col-highlight {
+    background: rgba(99, 102, 241, 0.14) !important;
+    color: var(--rlab-color-accent) !important;
+    font-weight: 600;
+}
+
+/* Cell-level highlight — for notable values inside any column */
+.reveal table.table-research .cell-strong {
+    color: var(--rlab-color-success);
+    font-weight: 700;
+}

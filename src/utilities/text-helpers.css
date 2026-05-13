@@ -20,3 +20,12 @@
     padding: 3px 10px;
     border-radius: 10px;
 }
+
+/* Semantic text colors — bridge for Bootstrap-style utility classes */
+.text-success { color: var(--rlab-color-success); }
+.text-warning { color: var(--rlab-color-warning); }
+.text-danger  { color: var(--rlab-color-danger); }
+.text-accent  { color: var(--rlab-color-accent); }
+.text-center  { text-align: center; }
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
