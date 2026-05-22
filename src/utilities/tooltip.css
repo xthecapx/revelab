@@ -1,0 +1,27 @@
+/* ── Tooltips ── */
+.metric-tip {
+    position: relative;
+    cursor: help;
+    border-bottom: 1px dotted currentColor;
+}
+.metric-tip::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: #f1f5f9;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.4em 0.7em;
+    border-radius: var(--rlab-radius-sm);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 100;
+}
+.metric-tip:hover::after {
+    opacity: 1;
+}

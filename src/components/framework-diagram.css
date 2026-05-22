@@ -278,3 +278,92 @@
     white-space: nowrap;
     flex-shrink: 0;
 }
+
+/* ── Framework utilities ── */
+.fw-footnote-tight {
+    margin-top: -2px;
+    margin-bottom: 4px;
+}
+.fw-footnote-top {
+    margin-top: 4px;
+}
+.fw-subgroup-algo {
+    background: #dbeafe;
+}
+.fw-subgroup-providers {
+    background: #e0f2fe;
+}
+.fw-provider-detail {
+    color: #475569;
+    font-weight: 400;
+}
+
+/* ── High-contrast modifier (projector-optimized) ── */
+.fw-high-contrast .fw-input {
+    border-color: #3b82f6;
+    background: #f8faff;
+}
+.fw-high-contrast .fw-input .fw-stage-title {
+    color: #1e40af;
+}
+.fw-high-contrast .fw-input .fw-subgroup {
+    border-color: #3b82f6;
+}
+.fw-high-contrast .fw-input .fw-subgroup-title {
+    color: #1e40af;
+}
+.fw-high-contrast .fw-input .fw-card {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+.fw-high-contrast .fw-paradigm-fourier {
+    border-color: #1d4ed8;
+    background: #bfdbfe;
+    color: #1e3a5f;
+}
+.fw-high-contrast .fw-paradigm-oracle {
+    border-color: #7c3aed;
+    background: #ddd6fe;
+    color: #3b0764;
+}
+.fw-high-contrast .fw-paradigm-entangle {
+    border-color: #0d9488;
+    background: #99f6e4;
+    color: #134e4a;
+}
+.fw-high-contrast .fw-footprint {
+    border-color: #d97706;
+    background: #fffbeb;
+}
+.fw-high-contrast .fw-footprint .fw-stage-title {
+    color: #d97706;
+}
+.fw-high-contrast .fw-footprint .fw-card {
+    border-color: #d97706;
+    background: #fff7ed;
+}
+.fw-high-contrast .fw-ml {
+    border-color: #ea580c;
+    background: #fff7ed;
+}
+.fw-high-contrast .fw-ml .fw-stage-title {
+    color: #ea580c;
+}
+.fw-high-contrast .fw-ml .fw-card {
+    border-color: #ea580c;
+    background: #fff7ed;
+}
+.fw-high-contrast .fw-targets {
+    border-color: #dc2626;
+    background: #fef2f2;
+}
+.fw-high-contrast .fw-targets .fw-stage-title {
+    color: #dc2626;
+}
+.fw-high-contrast .fw-targets .fw-target-card {
+    border-color: #dc2626;
+    background: #fef2f2;
+}
+.fw-high-contrast .fw-targets .fw-target-card strong {
+    color: #dc2626;
+}
