@@ -71,55 +71,31 @@
 }
 
 .reveal .card-body:has(table) {
-    padding: 0 !important;
+    padding: 0;
 }
 
 .reveal .card-body table {
-    width: 100% !important;
-    border: none !important;
-    margin: 0 !important;
+    width: 100%;
+    border: none;
+    margin: 0;
 }
 
 .reveal .card-body table th:first-child,
 .reveal .card-body table td:first-child {
-    border-left: none !important;
+    border-left: none;
 }
 
 .reveal .card-body table th:last-child,
 .reveal .card-body table td:last-child {
-    border-right: none !important;
+    border-right: none;
 }
 
 .reveal .card-body table thead tr:first-child th {
-    border-top: none !important;
+    border-top: none;
 }
 
 .reveal .card-body table tbody tr:last-child td {
-    border-bottom: none !important;
-}
-
-.reveal table {
-    border-collapse: collapse !important;
-    border: 1px solid var(--rlab-color-border) !important;
-    margin: 0 auto;
-}
-
-.reveal table th {
-    background-color: var(--rlab-color-bg-surface);
-    font-weight: 600;
-}
-
-.reveal table th,
-.reveal table td {
-    border: 1px solid var(--rlab-color-border) !important;
-    padding: 0.3em 0.6em;
-    text-align: left;
-}
-
-.reveal table.table-sm th,
-.reveal table.table-sm td {
-    padding: 0.15em 0.4em;
-    font-size: 0.9em;
+    border-bottom: none;
 }
 
 .reveal blockquote {

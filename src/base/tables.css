@@ -1,0 +1,24 @@
+/* Defaults stay overridable by component classes and presentation styles. */
+.reveal table {
+    border-collapse: collapse;
+    border: 1px solid var(--rlab-color-border);
+    margin: 0 auto;
+}
+
+.reveal table th {
+    background-color: var(--rlab-color-bg-surface);
+    font-weight: 600;
+}
+
+.reveal table th,
+.reveal table td {
+    border: 1px solid var(--rlab-color-border);
+    padding: 0.3em 0.6em;
+    text-align: left;
+}
+
+.reveal table.table-sm th,
+.reveal table.table-sm td {
+    padding: 0.15em 0.4em;
+    font-size: 0.9em;
+}

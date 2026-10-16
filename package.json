@@ -1,13 +1,14 @@
 {
   "name": "revelab",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Slide components for Reveal.js presentations — works standalone or as a Tailwind CSS plugin",
   "main": "index.js",
   "style": "dist/revelab.css",
   "packageManager": "pnpm@10.8.1",
   "scripts": {
     "dev": "vite",
-    "build": "node build.js"
+    "build": "node build.js",
+    "test": "node build.js && node --test"
   },
   "keywords": [
     "reveal.js",
@@ -41,12 +42,17 @@
   "devDependencies": {
     "lightningcss": "^1.32.0",
     "tailwindcss": "^4.0.0",
+    "tailwindcss-v3": "npm:tailwindcss@^3.4",
     "vite": "8"
   },
   "files": [
     "index.js",
     "src/**/*.css",
+    "docs/presentation-components.md",
     "dist/revelab.css",
     "dist/revelab.min.css"
-  ]
+  ],
+  "dependencies": {
+    "postcss": "^8.5.10"
+  }
 }

@@ -19,25 +19,37 @@ function loadCSS(dir) {
     .join("\n");
 }
 
-function parseCSS(css) {
-  const rules = [];
-  const regex = /([^{}]+)\{([^{}]+)\}/g;
-  let match;
-  while ((match = regex.exec(css)) !== null) {
-    const selector = match[1].trim();
-    const propsStr = match[2].trim();
-    const props = {};
-    propsStr.split(";").forEach((prop) => {
-      const [key, ...valParts] = prop.split(":");
-      if (key && valParts.length) {
-        props[key.trim()] = valParts.join(":").trim();
+// PostCSS preserves comments, nested @media rules and declaration values.
+// A regular expression cannot distinguish these from ordinary selectors.
+function cssToObject(css, shouldInclude = () => true) {
+  const postcss = require("postcss");
+  function convert(container, result = {}) {
+    for (const node of container.nodes || []) {
+      if (node.type === "rule") {
+        if (!shouldInclude(node.selector)) continue;
+        const props = result[node.selector] || {};
+        for (const decl of node.nodes) {
+          if (decl.type !== "decl") continue;
+          const value = decl.value + (decl.important ? " !important" : "");
+          // Preserve fallback declarations, e.g. a color before color-mix().
+          if (Object.hasOwn(props, decl.prop)) {
+            props[decl.prop] = [].concat(props[decl.prop], value);
+          } else {
+            props[decl.prop] = value;
+          }
+        }
+        result[node.selector] = props;
+      } else if (node.type === "atrule" && node.nodes) {
+        const key = `@${node.name}${node.params ? " " + node.params : ""}`;
+        const children = convert(node, result[key] || {});
+        if (Object.keys(children).length) {
+          result[key] = children;
+        }
       }
-    });
-    if (Object.keys(props).length) {
-      rules.push({ selector, props });
     }
+    return result;
   }
-  return rules;
+  return convert(postcss.parse(css));
 }
 
 if (plugin) {
@@ -52,11 +64,6 @@ if (plugin) {
         const layoutsCSS = loadCSS("layouts");
         const utilitiesCSS = loadCSS("utilities");
 
-        const themeRules = parseCSS(themeCSS);
-        const baseRules = parseCSS(baseCSS);
-        const componentRules = parseCSS(componentsCSS + "\n" + layoutsCSS);
-        const utilityRules = parseCSS(utilitiesCSS);
-
         function shouldInclude(selector) {
           if (include && !include.some((pat) => selector.includes(pat)))
             return false;
@@ -65,19 +72,10 @@ if (plugin) {
           return true;
         }
 
-        function rulesToObj(rules, filter = true) {
-          const obj = {};
-          rules.forEach(({ selector, props }) => {
-            if (filter && !shouldInclude(selector)) return;
-            obj[selector] = props;
-          });
-          return obj;
-        }
-
-        addBase(rulesToObj(themeRules, false));
-        addBase(rulesToObj(baseRules, false));
-        addComponents(rulesToObj(componentRules));
-        addUtilities(rulesToObj(utilityRules));
+        addBase(cssToObject(themeCSS));
+        addBase(cssToObject(baseCSS));
+        addComponents(cssToObject(componentsCSS + "\n" + layoutsCSS, shouldInclude));
+        addUtilities(cssToObject(utilitiesCSS, shouldInclude));
       };
     },
     () => ({})
