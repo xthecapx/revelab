@@ -1,0 +1,45 @@
+/* Semantic two-column table; each row can be a Reveal.js fragment. */
+.reveal table.table-comparison {
+    --tc-left-color: var(--rlab-color-accent);
+    --tc-right-color: var(--rlab-color-success);
+    --tc-column-gap: 0.6em;
+    --tc-row-gap: 0.3em;
+    width: 100%;
+    table-layout: fixed;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: var(--tc-column-gap) var(--tc-row-gap);
+    font-size: 0.75em;
+}
+
+.reveal table.table-comparison th,
+.reveal table.table-comparison td {
+    border: 0;
+    padding: 0.5em 0.75em;
+    text-align: left;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+.reveal table.table-comparison thead th {
+    background: transparent;
+    color: var(--tc-left-color);
+    font-weight: 700;
+    vertical-align: bottom;
+}
+
+.reveal table.table-comparison thead th:last-child { color: var(--tc-right-color); }
+
+.reveal table.table-comparison tbody th,
+.reveal table.table-comparison tbody td {
+    background: var(--rlab-color-bg-light);
+    background: color-mix(in srgb, var(--tc-left-color) 10%, var(--rlab-color-bg));
+    color: var(--rlab-color-text);
+    border-radius: var(--rlab-radius-sm);
+}
+
+.reveal table.table-comparison tbody td:last-child {
+    background: var(--rlab-color-bg-light);
+    background: color-mix(in srgb, var(--tc-right-color) 10%, var(--rlab-color-bg));
+    border-left: 3px solid var(--tc-right-color);
+}

@@ -22,7 +22,7 @@
     --rlab-radius-sm: 4px;
     --rlab-radius-md: 8px;
 
-    /* Reveal.js bridge — maps rui tokens to Reveal's --r-* system */
+    /* Reveal.js bridge — maps rlab tokens to Reveal's --r-* system */
     --r-background-color:          var(--rlab-color-bg);
     --r-main-color:                var(--rlab-color-text);
     --r-heading-color:             var(--rlab-color-text);

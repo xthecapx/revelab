@@ -1,0 +1,146 @@
+/* Grid positions belong to layouts; nodes and connectors are reusable. */
+.reveal .process-diagram {
+    --pd-line-color: var(--rlab-color-muted);
+    --pd-line-width: 2px;
+    --pd-link-size: 1.5em;
+    font-size: 0.65em;
+    line-height: 1.25;
+    width: 100%;
+    color: var(--rlab-color-text);
+}
+
+.reveal .process-diagram .pd-node {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 0.6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--rlab-color-border);
+    border-radius: var(--rlab-radius-md);
+    background: var(--rlab-color-bg-light);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.reveal .process-diagram .pd-node strong { display: block; }
+.reveal .process-diagram .pd-node small { display: block; margin-top: 0.3em; font-size: 0.85em; }
+
+.reveal .process-diagram .pd-focus {
+    border-color: var(--rlab-color-accent);
+    background: var(--rlab-color-bg-light);
+    background: color-mix(in srgb, var(--rlab-color-accent) 12%, var(--rlab-color-bg));
+    outline: 2px solid var(--rlab-color-accent);
+    outline-offset: 2px;
+}
+
+.reveal .process-diagram .pd-focus strong { color: var(--rlab-color-accent); }
+
+.reveal .process-diagram .pd-link {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    align-self: center;
+    width: 100%;
+    height: 0;
+    border-top: var(--pd-line-width) solid var(--pd-line-color);
+}
+
+.reveal .process-diagram .pd-link::after,
+.reveal .process-diagram .pd-link--both::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -1px;
+    top: calc(var(--pd-line-width) / -2);
+    transform: translateY(-50%);
+    border-left: 0.3em solid var(--pd-line-color);
+    border-top: 0.2em solid transparent;
+    border-bottom: 0.2em solid transparent;
+}
+
+.reveal .process-diagram .pd-link--both::before {
+    left: -1px;
+    right: auto;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.reveal .process-diagram .pd-link--down {
+    justify-self: center;
+    align-self: stretch;
+    width: 0;
+    height: 100%;
+    border-top: 0;
+    border-left: var(--pd-line-width) solid var(--pd-line-color);
+}
+
+.reveal .process-diagram .pd-link--down::after,
+.reveal .process-diagram .pd-link--down.pd-link--both::before {
+    left: calc(var(--pd-line-width) / -2);
+    right: auto;
+    top: auto;
+    bottom: -1px;
+    transform: translateX(-50%);
+    border: 0.2em solid transparent;
+    border-top: 0.3em solid var(--pd-line-color);
+    border-bottom: 0;
+}
+
+.reveal .process-diagram .pd-link--down.pd-link--both::before {
+    top: -1px;
+    bottom: auto;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.reveal .process-diagram .pd-link--dashed { border-top-style: dashed; }
+.reveal .process-diagram .pd-link--down.pd-link--dashed { border-left-style: dashed; }
+
+.reveal .process-diagram.pd-flow { display: flex; align-items: stretch; }
+.reveal .process-diagram.pd-flow > .pd-node { flex: 1; }
+.reveal .process-diagram.pd-flow > .pd-link { flex: 0 0 var(--pd-link-size); }
+
+.reveal .process-diagram.pd-cycle {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--pd-link-size) minmax(0, 1fr) var(--pd-link-size) minmax(0, 1fr);
+    grid-template-rows: auto var(--pd-link-size);
+}
+
+.reveal .process-diagram .pd-return {
+    position: relative;
+    grid-column: 1 / -1;
+    margin: 0 16%;
+    border: var(--pd-line-width) solid var(--pd-line-color);
+    border-top: 0;
+    border-radius: 0 0 var(--rlab-radius-md) var(--rlab-radius-md);
+}
+
+.reveal .process-diagram .pd-return::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(var(--pd-line-width) / -2);
+    transform: translateX(-50%);
+    border-left: 0.2em solid transparent;
+    border-right: 0.2em solid transparent;
+    border-bottom: 0.3em solid var(--pd-line-color);
+}
+
+/* A hub with an optional top step and a transverse bottom step. */
+.reveal .process-diagram.pd-hub {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--pd-link-size) minmax(0, 1.2fr) var(--pd-link-size) minmax(0, 1fr);
+    grid-template-rows: auto var(--pd-link-size) auto var(--pd-link-size) auto;
+}
+
+.reveal .process-diagram .pd-top { grid-area: 1 / 3; }
+.reveal .process-diagram .pd-top-link { grid-area: 2 / 3; }
+.reveal .process-diagram .pd-left { grid-area: 3 / 1; }
+.reveal .process-diagram .pd-left-link { grid-area: 3 / 2; }
+.reveal .process-diagram .pd-center { grid-area: 3 / 3; }
+.reveal .process-diagram .pd-right-link { grid-area: 3 / 4; }
+.reveal .process-diagram .pd-right { grid-area: 3 / 5; }
+.reveal .process-diagram .pd-bottom-left-link { grid-area: 4 / 1; }
+.reveal .process-diagram .pd-bottom-center-link { grid-area: 4 / 3; }
+.reveal .process-diagram .pd-bottom-right-link { grid-area: 4 / 5; }
+.reveal .process-diagram .pd-bottom { grid-area: 5 / 1 / 6 / -1; }

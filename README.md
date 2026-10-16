@@ -113,16 +113,16 @@ Side-by-side statistics display.
 </div>
 ```
 
-### Hallucination Box
+### Code Box
 
 Terminal-style code/output display.
 
 ```html
-<div class="hallucination-box">
-  <div class="hb-label">ERROR</div>
-  <p class="hb-prompt">$ ask "How do I deploy?"</p>
-  <p class="hb-response">Use the SDK v3.2.1...</p>
-  <p class="hb-error">⚠ The SDK does not exist.</p>
+<div class="code-box">
+  <div class="cb-label">ERROR</div>
+  <p class="cb-prompt">$ ask "How do I deploy?"</p>
+  <p class="cb-response">Use the SDK v3.2.1...</p>
+  <p class="cb-error">⚠ The SDK does not exist.</p>
 </div>
 ```
 
@@ -159,6 +159,18 @@ Project timeline with status badges.
 ```html
 <div class="emoji-row">🧠 🔀 💥 🎯</div>
 ```
+
+## New presentation components (0.4.0)
+
+| Component | Use |
+| --- | --- |
+| `table-comparison` | Two-column comparisons with aligned headings, tinted cells and fragment rows |
+| `process-diagram` | Flow, cycle and hub diagrams with arrows, return paths and node highlighting |
+| `demo-panel` | Code beside a live output, controls, status and a static print fallback |
+
+See [markup, customization and migration notes](docs/presentation-components.md). The components use theme tokens and keep execution logic in application code. The new table defaults can be overridden without `!important`.
+
+Try them with `pnpm dev` or build and open `examples/index.html`. Run `pnpm test` for the build and automated checks.
 
 ## Layouts
 
@@ -209,10 +221,10 @@ Override CSS custom properties to customize:
 
 ```css
 :root {
-  --rui-color-accent: #8b5cf6;
-  --rui-color-danger: #ef4444;
-  --rui-color-success: #22c55e;
-  --rui-radius-md: 12px;
+  --rlab-color-accent: #8b5cf6;
+  --rlab-color-danger: #ef4444;
+  --rlab-color-success: #22c55e;
+  --rlab-radius-md: 12px;
 }
 ```
 
@@ -220,19 +232,19 @@ All available variables:
 
 | Variable | Default | Purpose |
 |----------|---------|---------|
-| `--rui-color-text` | #1a1a1a | Primary text |
-| `--rui-color-muted` | #666 | Secondary text |
-| `--rui-color-faint` | #999 | Tertiary text |
-| `--rui-color-accent` | #6366f1 | Brand/accent |
-| `--rui-color-danger` | #dc3545 | Error/alert |
-| `--rui-color-success` | #198754 | Success |
-| `--rui-color-warning` | #f0ad4e | Warning |
-| `--rui-color-border` | #ccc | Borders |
-| `--rui-color-bg-light` | #f8f9fa | Light background |
-| `--rui-color-bg-surface` | #f5f5f5 | Surface |
-| `--rui-color-bg-code` | #1e1e2e | Code blocks |
-| `--rui-radius-sm` | 4px | Small radius |
-| `--rui-radius-md` | 8px | Medium radius |
+| `--rlab-color-text` | #1a1a1a | Primary text |
+| `--rlab-color-muted` | #666 | Secondary text |
+| `--rlab-color-faint` | #999 | Tertiary text |
+| `--rlab-color-accent` | #6366f1 | Brand/accent |
+| `--rlab-color-danger` | #dc3545 | Error/alert |
+| `--rlab-color-success` | #198754 | Success |
+| `--rlab-color-warning` | #f0ad4e | Warning |
+| `--rlab-color-border` | #ccc | Borders |
+| `--rlab-color-bg-light` | #f8f9fa | Light background |
+| `--rlab-color-bg-surface` | #f5f5f5 | Surface |
+| `--rlab-color-bg-code` | #1e1e2e | Code blocks |
+| `--rlab-radius-sm` | 4px | Small radius |
+| `--rlab-radius-md` | 8px | Medium radius |
 
 ## With Tailwind
 

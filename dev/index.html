@@ -20,6 +20,79 @@
         <p class="small-muted text-sm">Navigate with arrow keys →</p>
       </section>
 
+
+      <!-- Components introduced in 0.4.0 -->
+      <section id="comparison-table">
+        <h3>Challenges and responses</h3>
+        <div class="slide-content">
+          <table class="table-comparison">
+            <thead><tr><th scope="col">What can happen?</th><th scope="col">What should the application do?</th></tr></thead>
+            <tbody>
+              <tr><td>The computer is busy</td><td>Tell the user what is happening</td></tr>
+              <tr><td>An execution fails</td><td>Explain the problem and offer a retry</td></tr>
+              <tr class="fragment fade-up"><td>Results vary between runs</td><td>Repeat and evaluate the results</td></tr>
+            </tbody>
+          </table>
+          <p class="caption text-sm">Semantic headings, colored columns and Reveal.js row fragments.</p>
+        </div>
+      </section>
+
+      <section id="process-cycle">
+        <h3>A process that repeats</h3>
+        <div class="slide-content">
+          <div class="process-diagram pd-cycle" role="img" aria-label="Plan, build and test, then return to planning.">
+            <div class="pd-node"><strong>Plan</strong><small>Define the goal</small></div>
+            <span class="pd-link" aria-hidden="true"></span>
+            <div class="pd-node"><strong>Build</strong><small>Implement the idea</small></div>
+            <span class="pd-link" aria-hidden="true"></span>
+            <div class="pd-node"><strong>Test</strong><small>Evaluate and learn</small></div>
+            <span class="pd-return" aria-hidden="true"></span>
+          </div>
+          <p class="caption text-sm">Nodes and connectors inherit theme colors.</p>
+        </div>
+      </section>
+
+      <section id="process-hub">
+        <h3>Return to the results</h3>
+        <div class="slide-content">
+          <div class="process-diagram pd-hub" role="img" aria-label="Deployment, simulation and execution connect bidirectionally with theory. Results analysis evaluates all three and is highlighted.">
+            <div class="pd-node pd-top"><strong>Deployment</strong><small>Integrate the workflow</small></div>
+            <span class="pd-link pd-link--down pd-link--both pd-top-link" aria-hidden="true"></span>
+            <div class="pd-node pd-left"><strong>Simulation</strong><small>Test when possible</small></div>
+            <span class="pd-link pd-link--both pd-left-link" aria-hidden="true"></span>
+            <div class="pd-node pd-center"><strong>Theory</strong><small>Define expectations</small></div>
+            <span class="pd-link pd-link--both pd-right-link" aria-hidden="true"></span>
+            <div class="pd-node pd-right"><strong>Execution</strong><small>Run on hardware</small></div>
+            <span class="pd-link pd-link--down pd-link--dashed pd-bottom-left-link" aria-hidden="true"></span>
+            <span class="pd-link pd-link--down pd-link--dashed pd-bottom-center-link" aria-hidden="true"></span>
+            <span class="pd-link pd-link--down pd-link--dashed pd-bottom-right-link" aria-hidden="true"></span>
+            <div class="pd-node pd-bottom pd-focus"><strong>Results analysis</strong><small>Is the output useful for the problem?</small></div>
+          </div>
+          <p class="caption text-sm">Reuse a diagram and highlight a different node with .pd-focus.</p>
+        </div>
+      </section>
+
+      <section id="demo-panel">
+        <h3>Code and a live example</h3>
+        <div class="slide-content">
+          <div class="demo-panel" data-example-demo data-state="ready">
+            <div class="dp-code">
+              <p class="dp-label">JavaScript</p>
+              <pre><code>const double = n =&gt; n * 2;
+[1, 2, 3].map(double);</code></pre>
+            </div>
+            <div class="dp-preview">
+              <p class="dp-label">Output</p>
+              <div class="dp-controls"><button class="btn" type="button" data-run>Run</button><button class="btn" type="button" data-reset>Reset</button></div>
+              <pre class="dp-output" role="log" aria-label="Example output" aria-live="polite" aria-busy="false">Run the example to see its output.</pre>
+              <pre class="dp-print" aria-label="Sample output">[2,4,6]</pre>
+              <p class="dp-status" role="status">Local JavaScript example.</p>
+            </div>
+          </div>
+          <p class="caption text-sm">CSS component; execution belongs to the example. Printing shows a static result.</p>
+        </div>
+      </section>
+
       <!-- Diagram Flow -->
       <section>
         <h3>Diagram Flow</h3>

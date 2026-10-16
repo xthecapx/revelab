@@ -8,6 +8,7 @@
 @import '../src/base/slide-layout.css';
 @import '../src/base/typography.css';
 @import '../src/base/images.css';
+@import '../src/base/tables.css';
 
 /* Components */
 @import '../src/components/card.css';
@@ -23,6 +24,11 @@
 @import '../src/components/framework-diagram.css';
 @import '../src/components/sigmoid-chart.css';
 @import '../src/components/btn.css';
+@import '../src/components/cite-card.css';
+@import '../src/components/table-research.css';
+@import '../src/components/table-comparison.css';
+@import '../src/components/process-diagram.css';
+@import '../src/components/demo-panel.css';
 
 /* Layouts */
 @import '../src/layouts/divider.css';
@@ -36,3 +42,4 @@
 @import '../src/utilities/text-helpers.css';
 @import '../src/utilities/backgrounds.css';
 @import '../src/utilities/slide-number.css';
+@import '../src/utilities/tooltip.css';

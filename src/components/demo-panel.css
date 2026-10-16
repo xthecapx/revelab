@@ -1,0 +1,52 @@
+/* CSS only: the application owns execution, state and event handling. */
+.reveal .demo-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14em), 1fr));
+    gap: 1em;
+    font-size: 0.7em;
+    text-align: left;
+}
+
+.reveal .demo-panel .dp-code,
+.reveal .demo-panel .dp-preview {
+    min-width: 0;
+    padding: 0.8em;
+    border: 1px solid var(--rlab-color-border);
+    border-radius: var(--rlab-radius-md);
+    background: var(--rlab-color-bg-light);
+}
+
+.reveal .demo-panel .dp-label {
+    margin: 0 0 0.6em;
+    color: var(--rlab-color-muted);
+    font-weight: 700;
+    font-size: 0.85em;
+}
+
+.reveal .demo-panel pre {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    font-size: 0.85em;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.reveal .demo-panel pre code { max-height: none; padding: 0; overflow: visible; color: inherit; background: transparent; }
+.reveal .demo-panel .dp-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em; margin-bottom: 0.8em; }
+.reveal .demo-panel .dp-output { min-height: 4em; }
+.reveal .demo-panel .dp-status { margin: 0.8em 0 0; color: var(--rlab-color-muted); font-size: 0.85em; }
+.reveal .demo-panel[data-state="pending"] .dp-status { color: var(--rlab-color-accent); }
+.reveal .demo-panel[data-state="error"] .dp-status { color: var(--rlab-color-danger); }
+.reveal .demo-panel .dp-controls button:disabled { opacity: 0.55; cursor: wait; }
+.reveal .demo-panel .dp-controls button:focus-visible { outline: 3px solid var(--rlab-color-accent); outline-offset: 3px; }
+.reveal .demo-panel .dp-print { display: none; }
+
+@media print {
+    .reveal .demo-panel .dp-controls { display: none; }
+    .reveal .demo-panel:has(.dp-print) .dp-output { display: none; }
+    .reveal .demo-panel .dp-print { display: block; }
+    .reveal .demo-panel:has(.dp-print) .dp-status { display: none; }
+}

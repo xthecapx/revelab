@@ -167,6 +167,16 @@ Styled buttons and links.
 <div class="emoji-row">🧠 🔀 💥</div>
 ```
 
+## Reusable presentation patterns (0.4.0)
+
+Read [presentation component markup](../../docs/presentation-components.md) before using these components:
+
+- `table-comparison`: a semantic two-column table with `th scope="col"`. Add Reveal.js fragments to rows; use simple action phrases in the right column.
+- `process-diagram`: `pd-flow`, `pd-cycle` and `pd-hub` layouts, `pd-node` blocks, directional/dashed `pd-link` connectors, `pd-return` cycle paths and `pd-focus` for revisiting a diagram with one node emphasized.
+- `demo-panel`: `dp-code` beside `dp-preview`, with `dp-controls`, `dp-output`, `dp-status` and an optional `dp-print` fallback. The component is CSS-only; application code owns execution, keyboard handling, cancellation and accessibility state.
+
+Keep source diagrams intact when adding a callback slide. Reuse their structure and move the `pd-focus` class to the relevant node. Include an accessible description of the complete diagram. For interactive examples, include a static authored output for print and a clear waiting status.
+
 ## Layouts (section classes)
 
 | Class | Use |
